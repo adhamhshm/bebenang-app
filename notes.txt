@@ -1,0 +1,39 @@
+ - npx create-next-app@latest ./
+ - npm install @clerk/nextjs @uploadthing/react mongoose svix uploadthing
+ - npm install tailwindcss-animate
+ - npm install @clerk/themes -> to use Clerk dark theme
+ - npm run dev
+
+ - About Route Groups 
+ - https://nextjs.org/docs/app/building-your-application/routing/route-groups
+
+ - About clerk
+ - https://clerk.com/docs/nextjs/get-started-with-nextjs 
+
+ - Regarding Clerk Webhook
+ - we will need to deploy first to get the API route, that then, will be added as the endpoint
+
+ - Tailwind Cheat Sheet
+ - https://nerdcave.com/tailwind-cheat-sheet 
+
+ - shadcn/ui
+ - https://ui.shadcn.com/
+ - npx shadcn-ui@latest init
+ - npx shadcn-ui@latest add form
+ - npx shadcn-ui@latest add input 
+ - npx shadcn-ui@latest add textarea
+ - npx shadcn-ui@latest add tabs  
+
+- zod
+- https://zod.dev/
+
+- uploadthing
+- https://docs.uploadthing.com/
+- create an account and project to obtain the API keys
+
+- MongoDB
+- create a new project, add new cluster
+- setup the database access user with its password (make sure to save it somewhere else)
+- setup the ip address using 0.0.0.0/0 to give access from evrywhere
+- then, create a new cluster, save the connection strings to env file
+
