@@ -7,15 +7,15 @@ import { usePathname, useRouter } from "next/navigation";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-
-import { updateUser } from "@/lib/actions/user.actions";
 import { ThreadValidation } from "@/lib/validations/thread";
 import { createThread } from "@/lib/actions/thread.actions";
+import { useOrganization } from "@clerk/nextjs";
 
 function PostThread({ userId }: { userId: string }) {
 
     const router = useRouter();
     const pathname = usePathname();
+    const { organization } = useOrganization();
     
     const form = useForm({
         // Create the UserValidation in "/lib/validations/user.ts"
@@ -31,9 +31,9 @@ function PostThread({ userId }: { userId: string }) {
         await createThread({
             text: values.thread,
             author: userId,
-            communityId: null,
+            communityId: organization ? organization.id : null, // if there is an organization, get its id
             path: pathname,
-        })
+        });
 
         router.push("/");
     };

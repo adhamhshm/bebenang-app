@@ -16,7 +16,7 @@ interface Params {
 export async function createThread({ text, author, communityId, path }: Params) {
     try {
         connectToDB();
-        const createdThread = await Thread.create({ text, author, community: null });
+        const createdThread = await Thread.create({ text, author, community: communityId });
         //Update User Model as they are the author of their own thread
         await User.findByIdAndUpdate(author, {
             $push: { threads: createdThread._id }

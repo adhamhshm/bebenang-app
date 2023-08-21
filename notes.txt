@@ -12,6 +12,10 @@
 
  - Regarding Clerk Webhook
  - we will need to deploy first to get the API route, that then, will be added as the endpoint
+ - use the deployment link with endpoint that point to th webhook path
+ - choose all the necessary events
+ - then click create
+ - copy the "signing secret" and you know the drill
 
  - Tailwind Cheat Sheet
  - https://nerdcave.com/tailwind-cheat-sheet 

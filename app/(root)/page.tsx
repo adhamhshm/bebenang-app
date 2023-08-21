@@ -11,7 +11,7 @@ export default async function Home() {
 
     // Check if there is a user
     if (!user) {
-        return null;
+        redirect("/sign-in");
     };
 
     // Fetch the current user
