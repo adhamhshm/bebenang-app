@@ -1,10 +1,10 @@
 # Bebenang App
 
-A clone web application for a social media platform. Build upon Next.js, MongoDB, Clerk Authentication, Uploadthing, shadcn/ui and Tailwind CSS.
-
-![Bebenang Homepage](screenshots/bebenang-homepage.png)
+A clone web application for a social media platform. Build upon TypeScript, Next.js, MongoDB, Clerk Authentication, Uploadthing, shadcn/ui and Tailwind CSS.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+![Bebenang Homepage](screenshots/bebenang-homepage.png)
 
 ## Getting Started
 
